@@ -22,11 +22,8 @@ pipeline {
       }
 
       post {
-        always {
-            jacoco(execPattern: '**/target/site/jacoco/jacoco.xml')
-          }
+        jacoco()
       }
     }
-
   }
 }

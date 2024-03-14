@@ -22,7 +22,9 @@ pipeline {
       }
 
       post {
-        jacoco()
+        always {
+            jacoco()
+        }
       }
     }
   }

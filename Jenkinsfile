@@ -20,6 +20,12 @@ pipeline {
       steps {
         sh 'mvn test jacoco:report'
       }
+
+      post {
+        always {
+            jacoco(execPattern: '**/target/site/jacoco/jacoco.xml')
+          }
+      }
     }
 
   }

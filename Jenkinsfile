@@ -2,8 +2,8 @@ pipeline {
   agent any
 
   tools {
-            maven "M3"
-        }
+          maven "M3"
+      }
 
   triggers {
         cron('H/10 * * * 4') //triggers every 10 minutes on Thursdays
